@@ -6,6 +6,14 @@ def game_loop():
     print(p1)
     print(p2)
 
+    turn = 0
+    while p1.is_alive() and p2.is_alive():
+        attacker, defender = (p1, p2) if turn == 0 else (p2, p1)
+        damage = attacker.attack
+        defender.take_damage(damage)
+        print(f"{attacker.name} attacks {defender.name} for {damage} damage")
+        turn = 1 - turn
+
 def main():
     game_loop()
 
