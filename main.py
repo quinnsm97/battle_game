@@ -24,6 +24,9 @@ def game_loop():
         else:
             print("Invalid move. Turn skipped.")
 
+        p1.defense = 5
+        p2.defense = 5
+
         turn = 1 - turn
 
     print("Game Over!")
