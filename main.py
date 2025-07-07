@@ -1,5 +1,6 @@
 from game.characters import Player
 from game.actions import attack, defend
+from rich import print
 
 def game_loop():
     p1 = Player(input("Name Player 1: "))
@@ -11,27 +12,27 @@ def game_loop():
     while p1.is_alive() and p2.is_alive():
         attacker, defender = (p1, p2) if turn == 0 else (p2, p1)
 
-        print(f"\n{attacker.name}'s turn!")
-        print("1. Attack  2. Defend")
+        print(f"\n[bold cyan]{attacker.name}'s turn![/bold cyan]")
+        print("[yellow]1. Attack  2. Defend[/yellow]")
         choice = input("Choose: ")
 
         if choice == "1":
             damage = attack(attacker, defender)
-            print(f"{attacker.name} attacks {defender.name} for {damage} damage")
+            print(f"[bold green]{attacker.name}[/bold green] attacks [bold red]{defender.name}[/bold red] for [bold]{damage}[/bold] damage")
         elif choice == "2":
             defend(attacker)
-            print(f"{attacker.name} is defending!")
+            print(f"[italic][green]{attacker.name}[/green] is defending![/italic]")
         else:
-            print("Invalid move. Turn skipped.")
+            print("[red]Invalid move. Turn skipped.[/red]")
 
         p1.defense = 5
         p2.defense = 5
 
         turn = 1 - turn
 
-    print("Game Over!")
+    print("\n[bold magenta]Game Over![/bold magenta]")
     winner = p1 if p1.is_alive() else p2
-    print(f"{winner.name} wins!")
+    print(f"[bold underline green]{winner.name} wins![/bold underline green]")
 
 def main():
     game_loop()
