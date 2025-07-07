@@ -14,6 +14,11 @@ def game_loop():
         print(f"{attacker.name} attacks {defender.name} for {damage} damage")
         turn = 1 - turn
 
+        ...
+    print("Game Over!")
+    winner = p1 if p1.is_alive() else p2
+    print(f"{winner.name} wins!")
+
 def main():
     game_loop()
 
