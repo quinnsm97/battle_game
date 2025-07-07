@@ -35,7 +35,12 @@ def game_loop():
     print(f"[bold underline green]{winner.name} wins![/bold underline green]")
 
 def main():
-    game_loop()
+    while True:
+        game_loop()
+        again = input("\nPlay again? (y/n): ").strip().lower()
+        if again != "y":
+            print("[bold blue]Thanks for playing![/bold blue]")
+            break
 
 if __name__ == "__main__":
     main()
