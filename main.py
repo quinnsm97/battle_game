@@ -1,4 +1,5 @@
 from game.characters import Player
+from game.actions import attack
 
 def game_loop():
     p1 = Player(input("Name Player 1: "))
@@ -9,12 +10,10 @@ def game_loop():
     turn = 0
     while p1.is_alive() and p2.is_alive():
         attacker, defender = (p1, p2) if turn == 0 else (p2, p1)
-        damage = attacker.attack
-        defender.take_damage(damage)
+        damage = attack(attacker, defender)
         print(f"{attacker.name} attacks {defender.name} for {damage} damage")
         turn = 1 - turn
 
-        ...
     print("Game Over!")
     winner = p1 if p1.is_alive() else p2
     print(f"{winner.name} wins!")
