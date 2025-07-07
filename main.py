@@ -1,5 +1,6 @@
 from game.characters import Player
 from game.actions import attack, defend
+from game.utils import prompt_action
 from rich import print
 
 def game_loop():
@@ -13,8 +14,11 @@ def game_loop():
         attacker, defender = (p1, p2) if turn == 0 else (p2, p1)
 
         print(f"\n[bold cyan]{attacker.name}'s turn![/bold cyan]")
-        print("[yellow]1. Attack  2. Defend[/yellow]")
-        choice = input("Choose: ")
+        
+        choice = prompt_action()
+        while choice not in ("1", "2"):
+            print("[red]Invalid move. Choose 1 or 2.[/red]")
+            choice = prompt_action()
 
         if choice == "1":
             damage = attack(attacker, defender)
