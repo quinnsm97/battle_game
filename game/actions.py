@@ -1,4 +1,5 @@
 import random
+from game.characters import Character
 
 def attack(attacker, defender):
     damage = attacker.attack
