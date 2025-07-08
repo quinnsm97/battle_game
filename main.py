@@ -27,17 +27,20 @@ def game_loop():
         if choice == "1":
             damage = attack(attacker, defender)
             console.print(f"[bold green]{attacker.name}[/bold green] attacks [bold red]{defender.name}[/bold red] for [bold]{damage}[/bold] damage")
+            defender.defense = 5
+            defender.defending = False
+
         elif choice == "2":
             attacker.defending = True
             defend(attacker)
             print(f"[italic]{attacker.name} is defending![/italic]")
+
         elif choice == "3":
             damage = special_attack(attacker, defender)
+            defender.defense = 5
+            defender.defending = False
 
-        p1.defense = 5
-        p2.defense = 5
-        p1.defending = False
-        p2.defending = False
+        
 
         # Display health stats
         console.print(f"\n[bold yellow]Status Update:[/bold yellow]")
