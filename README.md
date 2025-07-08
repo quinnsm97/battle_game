@@ -17,7 +17,7 @@ pytest
 
 ## ▶️ Run the game
 clone the github repository:
-``` git clone git@github.com:quinnsm97/battle_game.git ````
+``` git clone git@github.com:quinnsm97/battle_game.git ```
 
 create venv and install dependancies:
 ``` python3 -m venv venv ```
