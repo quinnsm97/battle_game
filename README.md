@@ -17,12 +17,12 @@ pytest
 
 ## ▶️ Run the game
 clone the github repository:
-git clone git@github.com:quinnsm97/battle_game.git
+``` git clone git@github.com:quinnsm97/battle_game.git ````
 
 create venv and install dependancies:
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+``` python3 -m venv venv ```
+``` source venv/bin/activate ```
+```pip install -r requirements.txt```
 
 start the application:
-python3 main.py
+```python3 main.py```
