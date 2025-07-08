@@ -39,6 +39,11 @@ def game_loop():
         p1.defending = False
         p2.defending = False
 
+        # Display health stats
+        console.print(f"\n[bold yellow]Status Update:[/bold yellow]")
+        console.print(f"{p1.name}: [green]{p1.health} HP[/green]")
+        console.print(f"{p2.name}: [green]{p2.health} HP[/green]\n")
+
         turn = 1 - turn
 
     print("\n[bold magenta]Game Over![/bold magenta]")
