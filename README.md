@@ -1,6 +1,6 @@
 # Turn-Based Battle Game
 
-A simple 2-player turn-based combat game in Python.
+A simple 2-player turn-based combat game in Python. Refer to help.txt to see game instructions.
 
 ## 🎮 Features
 - Attack and defend mechanics

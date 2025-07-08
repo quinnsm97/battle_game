@@ -1,0 +1,8 @@
+Welcome to the 2-Player Turn-Based Battle Game!
+
+Each turn, choose:
+- 1: Basic attack
+- 2: Defend to reduce next incoming damage
+- 3: Special attack (may deal double damage or miss!)
+
+First to reduce their opponent’s HP to 0 wins!
