@@ -15,6 +15,8 @@ def defend(player):
 def special_attack(attacker: Character, defender: Character) -> int:
     import random
     if random.random() < 0.5:
+        damage = attacker.attack * 2
+        print(f"💥 {attacker.name}'s special attack hits for {damage} damage!")
         return defender.take_damage(attacker.attack * 2)
     else:
         print(f"{attacker.name}'s special move missed!")
