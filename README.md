@@ -12,10 +12,17 @@ A simple 2-player turn-based combat game in Python.
 - Unit tests for key components
 
 ## 🧰 Requirements
-- Python 3.x
-- [rich](https://pypi.org/project/rich/)
-- [pytest](https://pypi.org/project/pytest/)
+rich
+pytest
 
 ## ▶️ Run the game
-```bash
-python main.py
+clone the github repository:
+git clone git@github.com:quinnsm97/battle_game.git
+
+create venv and install dependancies:
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+start the application:
+python3 main.py
